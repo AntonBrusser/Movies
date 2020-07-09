@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 class="subtitle is-1 has-text-centered" style="margin-top: 5%;">Create New movie</h1>
+
+
+        <div class="container" style="width: 40%; margin-bottom: 7%;">
+            <div class="notification">
+                <form action="/movies/create/sucssessful" method="POST">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name" id="name">
+                        </div>
+                    </div>            
+                    <div class="field">
+                        <label class="label">Language</label>
+                        <div class="control">
+                            <input class="input" type="text" name="language" id="language">
+                        </div>            
+                    </div>
+                    <div class="field" style="margin-top: 6%;">
+                        <label class="label">Genre</label>
+                        <div class="control">
+                            <div class="field is-grouped is-grouped-multiline">
+                                <% data.forEach(function(genre) {     %>  
+                                    <div class="control" style="margin-left: 2%;">
+                                        <input type="checkbox" name="genres" id="<%=genre%>" value="<%=genre%>">
+                                        <label><%=genre%></label> <br>
+                                    </div>
+                                <%  })  %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped is-grouped-right"> 
+                        <input class="button is-primary" type="submit" value="Create">
+                    </div>
+
+                </form>
+            </div>
+            <p class ="has-text-danger has-text-centered has-text-weight-bold	"><%=message%></p>
+        </div>
+
+    </body>
+</html>

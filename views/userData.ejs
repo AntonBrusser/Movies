@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 class="subtitle is-1 has-text-centered" style="margin-top: 5%;">User Data</h1>
+        <div class="container" style="width: 40%; margin-bottom: 7%;">
+            <div class="notification">    
+                <form action="/users/<%= dataTask %>/<%=idData%>" method="POST">
+                    <div class="field is-grouped">
+                        <p class="control is-expanded">
+                            <label class="label">User Name</label>
+                            <input class="input" type="text" name="userName" id="" value="<%= userNameData %>">
+                        </p>
+                        <p class="control is-expanded">
+                            <label class="label">Password</label>
+                            <input class="input" type="text" name="password" id=""  value="<%= passwordData %>">
+                        </p>
+                    </div>
+                    <div class="field is-grouped">
+                        <p class="control is-expanded">
+                            <label class="label">Number of Transactions</label>
+                            <input class="input" type="text" name="transNumber" id=""  value="<%= transData %>">
+                        </p>
+                        <p class="control">
+                            <input class="button is-primary" type="submit" value="<%= dataTask %>" style="width: 15em; margin-top: 2em;">
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+            <div class="has-text-centered	">
+                <a href="/logout" class="content is-large has-text-weight-bold	">Log Out</a> <br><br>
+              </div>
+        </div>
+    </body>
+</html>
+
+
+

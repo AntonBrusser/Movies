@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    </head>
+    <body>
+
+
+
+        <h1 class="subtitle is-1 has-text-centered" style="margin-top: 5%;">Admin Page</h1>
+
+
+        <div class="container" style="width: 40%; margin-bottom: 7%;">
+            <div class="notification">
+                
+                <div class="column is-narrow">
+                    <div class="column is-4" style="padding-left: 2em;">
+                        <a class="button is-link" href="/users/data">Add New</a>
+                    </div>
+                </div>
+
+                <div class="table-container" style="padding: 6%; padding-top: 2%;">
+                    <table class="table is-fullwidth">
+                        <thead>
+                          <tr>
+                            <th>user name</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% data.forEach(function(users) {     %>                    
+                                <tr>
+                                    <td style="padding-top: 1em;">
+                                        <%= users.userName  %>
+                                    </td>
+                                    <td>
+                                        <div class="buttons has-addons is-right">
+                                            <a class="button is-primary is-rounded" href="/users/update/<%=users.id%>">Update</a>
+                                            <a class="button is-danger is-rounded" href="/users/delete/<%=users.id%>">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>                              
+                            <%  })  %>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <div class="has-text-centered	">
+                <a href="/logout" class="content is-large has-text-weight-bold	">Log Out</a> <br><br>
+              </div>
+        </div>
+    </body>
+</html>

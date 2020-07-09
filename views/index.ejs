@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  </head>
+  <body>
+    
+            <section class="hero is-medium is-primary is-bold" style="height: 100%;">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="title">
+                    <%= title %>
+                  </h1>
+                  <h2 class="subtitle">
+                    Welcome to <%= title %>
+                  </h2>
+                </div>
+              </div>
+              <div class="container" style="width: 40%; padding-bottom: 20em;">
+                <div class="notification">
+                     <p class="has-text-centered has-text-danger"><%=message%></p> 
+                  <form action="/menu" method="POST">
+                    <div class="field">
+                      <label class="label">User Name</label>
+                      <div class="control">
+                        <input class="input" type="text" name="user">
+                      </div>
+                    </div>
+                    
+                    <div class="field">
+                      <label class="label">Password</label>
+                      <div class="control">
+                        <input class="input" type="password" name="pwd" >
+                      </div>
+                      <input class="button is-primary" type="submit" value="Login" style="margin-top: 4%;">
+                    </div>
+              
+                    
+                  </form>
+                </div>
+              </div>
+              
+            </section>
+            
+
+
+
+  </body>
+</html>

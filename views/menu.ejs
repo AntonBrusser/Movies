@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 class="subtitle is-1 has-text-centered" style="margin-top: 5%;">Menu</h1>
+
+        <div class="columns is-mobile is-centered" style="margin-top: 3%;">
+            <div class="column is-half">
+              <p class="bd-notification is-primary has-text-centered">
+                  
+                  <a href="/movies/search" class="button is-link button is-large is-fullwidth">Search Movies</a> <br><br>
+                  <a href="/movies/create" class="button is-link button is-large is-fullwidth">Create New Movie</a> <br><br>
+                  
+                  <a href="/users" class="content is-large has-text-weight-bold	"><%=data%></a> <br><br>
+              </p>
+
+              <div class="tile is-parent">
+                <article class="tile is-child notification ">
+                  <p class ="has-text-danger has-text-centered has-text-weight-bold	"> <%=message%> </p>
+                  <p class="title"><%=sessionInfo%></p>
+                </article>
+              </div>
+
+              <div class="has-text-centered	">
+                <a href="/logout" class="content is-large has-text-weight-bold	">Log Out</a> <br><br>
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+
+    </body>
+</html>

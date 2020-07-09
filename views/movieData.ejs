@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="columns is-mobile" style="margin-top: 3%;">
+            <div class="column is-4 is-offset-1">
+                <div class="buttons has-addons">
+                    <a class="button is-link is-outlined" href="/movies/results">Back</a>
+                    <a class="button is-link is-outlined" href="/menu">Back To Menu</a>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="notification">
+            <h1 class="subtitle is-1 has-text-centered" style="margin-top: 1%;">movie data</h1>
+            <div class="columns is-mobile is-centered" style= "margin-top: 3%; padding-bottom: 5%;">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4"><%= data.name  %></p>
+                                <p class="subtitle is-6">ID: <%= data.id  %> </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            genres: <%= data.genres  %> <br>
+                            Language: <%= data.language  %>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-4by4">
+                                <img src="<%= data.image.medium  %>" alt="Placeholder image">
+                            </figure>
+                        </div>
+                    </div>
+                  </div>               
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
